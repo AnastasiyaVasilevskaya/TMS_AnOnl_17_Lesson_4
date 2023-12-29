@@ -19,7 +19,7 @@ public class ArrayOfEven {
 
         int[] array = new int[size];
         for (int i = 0; i < array.length; i++) {
-            array[i] = (int) (Math.random() * 50);
+            array[i] = (int) (Math.random() * 100);
         }
         System.out.println(Arrays.toString(array));
 
@@ -30,12 +30,16 @@ public class ArrayOfEven {
             }
         }
 
-        int[] arrayOfEven = new int[count];
-        for (int j = 0, readNumber = 0; readNumber < array.length; readNumber++) {
-            if (array[readNumber] % 2 == 0) {
-                arrayOfEven[j++] = array[readNumber];
+        if (count == 0) {
+            System.out.println("Четных элементов нет");
+        } else {
+            int[] arrayOfEven = new int[count];
+            for (int j = 0, readNumber = 0; readNumber < array.length; readNumber++) {
+                if (array[readNumber] % 2 == 0) {
+                    arrayOfEven[j++] = array[readNumber];
+                }
             }
+            System.out.println(Arrays.toString(arrayOfEven));
         }
-        System.out.println(Arrays.toString(arrayOfEven));
     }
 }
